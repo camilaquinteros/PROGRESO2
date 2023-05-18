@@ -9,11 +9,13 @@ int main() {
     
     printf("Ingrese el número de columnas: ");
     scanf("%d", &columnas);
+    
     // Crear la matriz y asignar memoria dinámicamente
     int **matriz = (int **)malloc(filas * sizeof(int *));
     for (int i = 0; i < filas; i++) {
         matriz[i] = (int *)malloc(columnas * sizeof(int));
-    }  
+    }
+    
     // Llenar la matriz con ceros y colocar 1 en la diagonal principal
     for (int i = 0; i < filas; i++) {
         for (int j = 0; j < columnas; j++) {
@@ -25,7 +27,7 @@ int main() {
         }
     }
     
- // Imprimir la matriz
+    // Imprimir la matriz
     printf("Matriz:\n");
     for (int i = 0; i < filas; i++) {
         for (int j = 0; j < columnas; j++) {
@@ -33,4 +35,13 @@ int main() {
         }
         printf("\n");
     }
+    
+    // Liberar la memoria asignada a la matriz
+    for (int i = 0; i < filas; i++) {
+        free(matriz[i]);
+    }
+    free(matriz);
+    
+    return 0;
+}
     
