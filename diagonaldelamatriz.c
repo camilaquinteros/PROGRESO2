@@ -25,3 +25,12 @@ int main() {
         }
     }
     
+ // Imprimir la matriz
+    printf("Matriz:\n");
+    for (int i = 0; i < filas; i++) {
+        for (int j = 0; j < columnas; j++) {
+            printf("%d ", matriz[i][j]);
+        }
+        printf("\n");
+    }
+    
