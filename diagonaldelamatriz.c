@@ -14,3 +14,14 @@ int main() {
     for (int i = 0; i < filas; i++) {
         matriz[i] = (int *)malloc(columnas * sizeof(int));
     }  
+    // Llenar la matriz con ceros y colocar 1 en la diagonal principal
+    for (int i = 0; i < filas; i++) {
+        for (int j = 0; j < columnas; j++) {
+            if (i == j) {
+                matriz[i][j] = 1;
+            } else {
+                matriz[i][j] = 0;
+            }
+        }
+    }
+    
