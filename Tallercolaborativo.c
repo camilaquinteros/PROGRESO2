@@ -62,6 +62,35 @@ int main() {
             carrera_max_cantidad = i + 1;
         }
     }
+    
+    const char* nombres_carreras[NUM_CARRERAS] = {
+        "Ingeniería de Software",
+        "Administración",
+        "Economía",
+        "Relaciones Internacionales",
+        "Matemáticas",
+        "Contabilidad",
+        "Ingeniería Industrial"
+    };
+
+ 
+
+    printf("b) La carrera con la mayor cantidad de alumnos en el último año fue: %s\n", nombres_carreras[carrera_max_cantidad - 1]);
+
+ 
+
+    // c) Calcular el año en que la carrera de Ingeniería de Software recibió la mayor cantidad de alumnos
+    int carrera_ingenieria_software = 1;
+    int max_cantidad_ingenieria_software = 0;
+    int anio_max_cantidad_ingenieria_software = 0;
+
+ 
+
+    for (int i = 0; i < num_anios; i++) {
+        int cantidad_ingenieria_software = datos_alumnos[i].cantidad[carrera_ingenieria_software - 1];
+        if (cantidad
+
+
  
  
  
