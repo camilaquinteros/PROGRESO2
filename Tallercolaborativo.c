@@ -44,5 +44,24 @@ int main() {
         }
     }
  
+    printf("a) El año con la mayor cantidad de alumnos ingresados fue: %d\n", anio_max_cantidad_total);
+
+ 
+
+    // b) Calcular la carrera que recibió la mayor cantidad de alumnos en el último año
+    int ultimo_anio = datos_alumnos[num_anios - 1].anio;
+    int max_cantidad_carrera = 0;
+    int carrera_max_cantidad = 0;
+
+ 
+
+    for (int i = 0; i < NUM_CARRERAS; i++) {
+        int cantidad = datos_alumnos[num_anios - 1].cantidad[i];
+        if (cantidad > max_cantidad_carrera) {
+            max_cantidad_carrera = cantidad;
+            carrera_max_cantidad = i + 1;
+        }
+    }
+ 
  
  
