@@ -28,3 +28,31 @@ int main() {
             maxAlumnosAnio = totalAlumnosAnio[i];
             anioMaxAlumnos = i + 1;
         }
+       
+    }
+    printf("El año con la mayor cantidad de alumnos fue el año %d.\n", anioMaxAlumnos);
+
+    // Calcular la carrera con la mayor cantidad de alumnos en el último año
+    int maxAlumnosCarrera = totalAlumnosCarrera[0];
+    int carreraMaxAlumnos = 1;
+    for (int i = 1; i < NUM_CARRERAS; i++) {
+        if (totalAlumnosCarrera[i] > maxAlumnosCarrera) {
+            maxAlumnosCarrera = totalAlumnosCarrera[i];
+            carreraMaxAlumnos = i + 1;
+        }
+    }
+    printf("La carrera con la mayor cantidad de alumnos en el último año fue la carrera %d.\n", carreraMaxAlumnos);
+
+    // Calcular el año en que la carrera de Ingeniería de Software recibió la mayor cantidad de alumnos
+    int maxAlumnosIngenieriaSoftware = datosAlumnos[0][0];
+    int anioMaxAlumnosIngenieriaSoftware = 1;
+    for (int i = 1; i < NUM_ANIOS; i++) {
+        if (datosAlumnos[i][0] > maxAlumnosIngenieriaSoftware) {
+            maxAlumnosIngenieriaSoftware = datosAlumnos[i][0];
+            anioMaxAlumnosIngenieriaSoftware = i + 1;
+        }
+    }
+    printf("La carrera de Ingeniería de Software recibió la mayor cantidad de alumnos en el año %d.\n", anioMaxAlumnosIngenieriaSoftware);
+
+    return 0;
+}
